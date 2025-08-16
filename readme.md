@@ -1,4 +1,4 @@
-# Step-1 Install docker engine on ubuntu 
+# Step-1: Install docker engine on ubuntu 
 #### Add Docker's official GPG key:
 ```bash 
 sudo apt-get update 
@@ -33,3 +33,20 @@ sudo docker ps
 
 Now restart the Docker service or re-login to the ubuntu user, and we can run Docker commands without "sudo"
 
+# Step-2: Install Kubectl 
+It is used to interact with Kube API server 
+``` curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" ```
+
+##### validate the binary
+```bash 
+ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256" 
+ echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+```
+##### Install kubectl 
+```sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl ```
+
+###### To verify 
+``` bash
+kubectl version           //gives both versions :- kubectl(client)  & k8s tool (server)
+kubectl version --client
+<img width="1186" height="464" alt="image" src="https://github.com/user-attachments/assets/e5b85be7-214e-4a40-a793-ee46a41f7385" />
