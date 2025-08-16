@@ -34,7 +34,8 @@ sudo docker ps
 Now restart the Docker service or re-login to the ubuntu user, and we can run Docker commands without "sudo"
 
 # Step-2: Install Kubectl 
-It is used to interact with Kube API server 
+It is used to interact with the Kube API server 
+
 ``` curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" ```
 
 ##### validate the binary
@@ -49,12 +50,13 @@ It is used to interact with Kube API server
 ``` bash
 kubectl version           //gives both versions :- kubectl(client)  & k8s tool (server)
 kubectl version --client
-<img width="1186" height="464" alt="image" src="https://github.com/user-attachments/assets/e5b85be7-214e-4a40-a793-ee46a41f7385" />
 ```
+<img width="1186" height="464" alt="image" src="https://github.com/user-attachments/assets/e5b85be7-214e-4a40-a793-ee46a41f7385" />
+
 # Step-3: Install terraform 
 ``` sudo apt-get update && sudo apt-get install -y gnupg software-properties-common  `
 
-##### Install gpg hashicorp key
+##### Install GPG Hashicorp key
 ```bash
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
@@ -77,7 +79,9 @@ gpg --no-default-keyring \
 ``` terraform --version  ```
 
 
-## Note:- Always use official documentation to install packages. Because blogs may be outdated, and if we follow them we might get older versions 
-Docker :-  https://docs.docker.com/engine/install/ubuntu/ 
-Kubectl :- https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux
-Terraform :- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+## Note:- Always use official documentation to install packages. Because blogs may be outdated, and if we follow them, we might get older versions 
+Docker Official:-  https://docs.docker.com/engine/install/ubuntu/  
+
+Kubectl Official:- https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux
+
+Terraform Official:- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
