@@ -78,6 +78,12 @@ $  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ha
 ##### To verify
 ``` $ terraform --version  ```
 
+ Also, we can enable auto-completion of Terraform commands 
+ ```bash
+  $ touch ~/.bashrc
+  $ terraform -install-autocomplete
+```
+After installing autocomplete support, you will need to restart your shell to enable it.
 
 ## Note:- Always use official documentation to install packages. Because blogs may be outdated, and if we follow them, we might get older versions 
 Docker Official:-  https://docs.docker.com/engine/install/ubuntu/  
