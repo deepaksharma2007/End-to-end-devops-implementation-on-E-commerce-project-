@@ -31,7 +31,7 @@ $ sudo docker ps
 ### Note:-  We need to use "sudo" to run Docker commands. To avoid this, we need to add the "ubuntu" user to the "docker" group 
 ```$ sudo usermod -aG docker ubuntu ```
 
-Now restart the Docker service or re-login to the ubuntu user, and we can run Docker commands without "sudo"
+Now restart the Docker service and re-login to the ubuntu user(disconnect from os and re-login), and we can run Docker commands without "sudo"
 
 # Step-2: Install Kubectl 
 It is used to interact with the Kube API server 
