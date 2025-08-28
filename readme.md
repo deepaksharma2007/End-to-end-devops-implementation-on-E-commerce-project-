@@ -1,4 +1,4 @@
-# Step-1: Install Docker engine on Ubuntu
+# Step-1: Install Docker Engine on Ubuntu
 #### Add Docker's official GPG key:
 ```bash 
 $ sudo apt-get update 
